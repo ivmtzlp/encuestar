@@ -69,7 +69,7 @@ graficar_blackbox_1d <- function(lst){
 
 
 
-encuesta_demo$muestra$diseno$variables<-
+
 
 
 

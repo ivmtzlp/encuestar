@@ -1,3 +1,5 @@
+library(dplyr)
+
 ruta_archivo <- "./R/clases_surveytogo.R"
 script <- readLines(ruta_archivo)
 
@@ -74,5 +76,3 @@ for(ln_inicio_clase in lineas_clases) {
 
 
 
-# Mostrar el resultado
-print(resultado_clases)

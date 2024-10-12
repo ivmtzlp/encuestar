@@ -18,8 +18,8 @@ resultado_clases <- data.frame(
   linea_clase_inicio = integer(),
   linea_clase_fin = integer(),
   funcion = character(),
-  linea_funcion_inicio = integer(),
-  linea_funcion_fin = integer(),
+  linea_metodo_inicio = integer(),
+  linea_metodo_fin = integer(),
   stringsAsFactors = FALSE
 )
 
@@ -64,8 +64,8 @@ for(ln_inicio_clase in lineas_clases) {
       linea_clase_inicio = ln_inicio_clase,
       linea_clase_fin = ln_fin_clase,
       funcion = nombre_funcion,
-      linea_funcion_inicio = ln_inicio_funcion,
-      linea_funcion_fin = ln_fin_funcion
+      linea_metodo_inicio = ln_inicio_funcion,
+      linea_metodo_fin = ln_fin_funcion
     ))
 
   }

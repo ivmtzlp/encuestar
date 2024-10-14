@@ -113,9 +113,12 @@ mapa_ganador = function(variable,region = 'region', lugar = 1, na_rm = T){
       by = 'region')|>
     filter(!is.na(region))%>%
     graficar_mapaRegiones(variable = {{variable}})
-},
+}
 
 
+encuesta_demo$Resultados$Regiones$mapa_ganador(variable = 'voto_pm_24',lugar = 1)
+
+encuesta_demo$muestra$diseno$variables
 
 
 

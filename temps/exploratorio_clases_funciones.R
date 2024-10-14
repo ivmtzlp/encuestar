@@ -74,5 +74,12 @@ for(ln_inicio_clase in lineas_clases) {
 }
 
 
+ejemp<-resultado_clases|>
+  mutate(ejemplo =  stringr::str_replace(funcion,pattern = '.(?!function)',replacement = '') )
+
+
+
+
+
 
 

@@ -2072,9 +2072,9 @@ Regiones <- R6::R6Class(classname = "Regiones",
 
                             }
 
-                            self$shp|>
+                            self$shp_regiones|>
                               left_join(
-                                analizar_cruce(diseno = self$diseno,
+                                analizar_cruce(diseno = diseno,
                                                            variable_principal = region,
                                                            variable_secundaria = variable,
                                                            vartype = 'cv',na_rm = na_rm)|>

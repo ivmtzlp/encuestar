@@ -17,7 +17,7 @@ resultado_clases <- data.frame(
   clase = character(),
   linea_clase_inicio = integer(),
   linea_clase_fin = integer(),
-  funcion = character(),
+  metodo = character(),
   linea_metodo_inicio = integer(),
   linea_metodo_fin = integer(),
   stringsAsFactors = FALSE
@@ -63,7 +63,7 @@ for(ln_inicio_clase in lineas_clases) {
       clase = nombre_clase,
       linea_clase_inicio = ln_inicio_clase,
       linea_clase_fin = ln_fin_clase,
-      funcion = nombre_funcion,
+      metodo = nombre_funcion,
       linea_metodo_inicio = ln_inicio_funcion,
       linea_metodo_fin = ln_fin_funcion
     ))
@@ -75,8 +75,9 @@ for(ln_inicio_clase in lineas_clases) {
 
 
 ejemp<-resultado_clases|>
-  mutate(ejemplo =  stringr::str_replace(funcion,pattern = '.(?!function)',replacement = '') )
-
+  filter(!grepl('initialize',metodo), !grepl('#',metodo) )|>
+  mutate(metodo =  stringr::str_replace(metodo,pattern = '(= function).*',replacement = ''),
+         metodo = trimws(metodo))
 
 
 

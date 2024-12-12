@@ -16,3 +16,6 @@ graficar_conocimientoRegion(bd, ordenRegiones, salto_labelRegiones = 5)
 \description{
 Graficar conocimiento de personajes por región o estrato
 }
+\examples{
+graficar_conocimientoRegion(bd_analizar_conocimientoRegion, ordenRegiones = c("reg_02", "reg_01, "reg_03))
+}

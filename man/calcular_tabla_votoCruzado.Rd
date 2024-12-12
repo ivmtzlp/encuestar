@@ -2,29 +2,13 @@
 % Please edit documentation in R/procesar_surveytogo.R
 \name{calcular_tabla_votoCruzado}
 \alias{calcular_tabla_votoCruzado}
-\title{Tabla de voto cruzado}
+\title{Title}
 \usage{
-calcular_tabla_votoCruzado(diseno, var1, var2, filtro_var2, na_rm = TRUE)
+calcular_tabla_votoCruzado(diseno, var1, var2, filtro_var2)
 }
 \arguments{
-\item{diseno}{Diseno muestral que contiene los pesos por individuo y las variables relacionadas.}
-
-\item{var1}{Variable principal para hacer el cruce}
-
-\item{var2}{Variable secundaria para hacer el cruce}
-
-\item{filtro_var2}{Valores unicos de la variable secundaria que son de interes}
-
-\item{na_rm}{na_rm=TRUE Variable booleana que indica si se desea filtrar NAs (TRUE) o no (FALSE)}
-}
-\value{
-\code{\link[=tibble]{tibble()}} con las variables necesarias para la funcion \code{\link[=formatear_tabla_votoCruzado]{formatear_tabla_votoCruzado()}}
+\item{var2}{}
 }
 \description{
-Calcular y ordena los resultados de un cruce entre una variable principal y una variable secundaria.
-Muestra los valores indicados en el filtro de la segunda variable. Produce la base de datos
-necesaria para la funcion \code{\link[=formatear_tabla_votoCruzado]{formatear_tabla_votoCruzado()}}
-}
-\examples{
-calcular_tabla_votoCruzado(diseno = encuesta_demo$muestra$diseno, var1 = "voto_pm_24", var2 = "voto_pr_24", filtro_var2 = c("Claudia Sheinbaum por MORENA-PT-Partido Verde", "Xóchitl Gálvez por PAN-PRI-PRD"))
+Title
 }

@@ -2,28 +2,26 @@
 % Please edit documentation in R/procesar_surveytogo.R
 \name{analizar_frecuencias_aspectos}
 \alias{analizar_frecuencias_aspectos}
-\title{Analizar frecuencias de multiples variables}
+\title{Analizar frecuencias aspectos}
 \usage{
 analizar_frecuencias_aspectos(diseno, diccionario, patron_pregunta, aspectos)
 }
 \arguments{
-\item{diseno}{Diseno muestral que contiene los pesos por individuo y las variables relacionadas}
+\item{diseno}{Diseno muestral que contiene los pesos por individuo y las variables relacionadas.}
 
 \item{diccionario}{Cuestionario de la encuesta en formato de procesamiento requerido}
 
-\item{patron_pregunta}{Cadena de texto en comun (inicial) entre los nombres de las variables a analizar.}
+\item{patron_pregunta}{Patrón que comparten las variables a analizar.}
 
-\item{aspectos}{Vector de tipo cadena de texto (final) que diferencia las variables a analizar.
-Separada de patron_pregunta por un guion bajo.}
+\item{aspectos}{Cadena de texto que diferencia las variables a analizar. Separada de patron_pregunta por un guion bajo.}
 }
 \value{
-Base de datos con las estimaciones de frecuencia para cada categoria respondida por cada aspecto distinto.
+\item{estimacion}{Base de datos con las estimaciones de frecuencia para cada categoria respondida por cada aspecto distinto.}
 }
 \description{
-Calcula la media de multiples variables cuyos nombres comparten un patron inicial en comun
-de un diseno muestral construido con la paqueteria \code{survey}
+Analizar frecuencias aspectos
 }
 \examples{
-analizar_frecuencias_aspectos(diseno = encuesta_demo$muestra$diseno, diccionario = encuesta_demo$cuestionario$diccionario, patron_pregunta = "conoce_pm", aspectos = c("astiazaran", "delrio"))
-analizar_frecuencias_aspectos(diseno = encuesta_demo$muestra$diseno, diccionario = encuesta_demo$cuestionario$diccionario, patron_pregunta = "conoce_pm", aspectos = c("lia", "javier"))
+analizar_frecuencias_aspectos(diseno = as_survey_design(diseno), diccionario = encuesta$diccionario, patron_pregunta = "opinion", aspectos = c("amlo", "claudia", "ebrard"))
+analizar_frecuencias_aspectos(diseno = as_survey_design(diseno), diccionario = encuesta$diccionario, patron_pregunta = "conocimiento", aspectos = c("amlo", "claudia", "ebrard"))
 }

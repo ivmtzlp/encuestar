@@ -2,36 +2,19 @@
 % Please edit documentation in R/procesar_surveytogo.R
 \name{calcular_mediaMovil_region}
 \alias{calcular_mediaMovil_region}
-\title{Calcular media movil de una variable agrupado por region
-de un diseno muestral construido con la paqueteria \code{survey}}
+\title{Calcular media movil de una variable por region}
 \usage{
 calcular_mediaMovil_region(
   bd_resultados,
   variable,
+  sin_peso,
   valores_interes,
-  variable_region,
-  sin_peso
+  variable_region
 )
 }
 \arguments{
-\item{bd_resultados}{\code{\link[=tibble]{tibble()}} que contien la variable de interes y los pesos necesarios para el calculo}
-
-\item{variable}{Nombre de la variable de interes}
-
-\item{valores_interes}{Valor de interes contenido en la variable de interes}
-
-\item{variable_region}{Nombre de la variable que indica las regiones en el diseno muestral.}
-
-\item{sin_peso}{Logical. Se usa para calcular resultados con o sin pesos}
-}
-\value{
-\code{\link[=tibble]{tibble()}} con las variables: hora, variable_interes, movil_variable_nteres
+\item{variable_region}{}
 }
 \description{
-Calcular media movil de una variable agrupado por region
-de un diseno muestral construido con la paqueteria \code{survey}
-}
-\examples{
-calcular_mediaMovil_region(bd_resultados = encuesta_demo$Resultados$Tendencias$bd_resultados, variable = "voto_pr_24", valores_interes = "Claudia Sheinbaum por MORENA-PT-Partido Verde", variable_region = "region", sin_peso = TRUE)
-calcular_mediaMovil_region(bd_resultados = encuesta_demo$Resultados$Tendencias$bd_resultados, variable = "voto_pr_24", valores_interes = "Claudia Sheinbaum por MORENA-PT-Partido Verde", variable_region = "region", sin_peso = FALSE)
+Calcular media movil de una variable por region
 }

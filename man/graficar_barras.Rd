@@ -2,14 +2,14 @@
 % Please edit documentation in R/graficar.R
 \name{graficar_barras}
 \alias{graficar_barras}
-\title{Gráfica de barras horizontales}
+\title{Gráfica de barras horizontales ordenadas}
 \usage{
 graficar_barras(
   bd,
   salto = 20,
   porcentajes_fuera = F,
   desplazar_porcentajes = 0,
-  orden_respuestas = NA
+  orden_respuestas
 )
 }
 \arguments{
@@ -20,17 +20,11 @@ graficar_barras(
 \item{porcentajes_fuera}{Si es T, las labels de los porcentajes aparecen fuera (o sobre) las barras.}
 
 \item{desplazar_porcentajes}{Si porcentajes_fuera es T, este parametro ajusta las etiquetas de texto.}
-
-\item{orden_respuestas}{Vector ordenado tipo caracter usado para ordenar los valores del eje x}
-}
-\value{
-Objeto tipo \link{ggplot}
 }
 \description{
-Recibe un \code{\link[=tibble]{tibble()}} y genera un objeto tipo \link{ggplot}. El producto es una grafica de barras
-ordenadas de acuerdo al criterio indicado.
+Gráfica de barras horizontales ordenadas
 }
 \examples{
-encuestar:::analizar_frecuencias(diseno = encuesta_demo$muestra$diseno, pregunta = "voto_pm_24") |> encuestar:::graficar_barras()
-encuestar:::analizar_frecuencias(diseno = encuesta_demo$muestra$diseno, pregunta = "seguridad_sonora") |> encuestar:::graficar_barras()
+graficar_barras(bd, salto = 13)
+graficar_barras(bd, porcentajes_fuera = T, desplazar_porcentajes = 0.1)
 }
